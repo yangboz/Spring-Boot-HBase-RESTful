@@ -1,20 +1,23 @@
 # Spring-Boot-HBase-RESTful
 Spring-Boot-HBase-RESTful
 
+![Image of hadoop-hive-hbase](https://github.com/yangboz/Spring-Boot-HBase-RESTful/raw/master/hadoop-hive-hbase.png)
+
 ##Installing
 
-'''
+```
 brew install hadoop hbase zookeeper
-'''
+```
 
 ##Getting Started with HBase
 
-'''
+```
 start-hbase.sh start
-'''
-'''
+```
+
+```
 sudo /usr/local/Cellar/zookeeper/3.4.8/bin/zkServer start
-'''
+```
 
 ##References
 
