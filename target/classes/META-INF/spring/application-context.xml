@@ -10,10 +10,10 @@
 
     <context:property-placeholder location="hbase.properties"/>
 
-    <context:component-scan base-package="org.springframework.samples.hadoop.hbase"/>
+    <context:component-scan base-package="info.smartkit.data.hadoop.hbase"/>
 
     <hdp:configuration id="hadoopConfiguration">
-        fs.defaultFS=hdfs://localhost:8020
+        fs.defaultFS=hdfs://localhost:9000
     </hdp:configuration>
 
     <hdp:hbase-configuration configuration-ref="hadoopConfiguration" zk-quorum="${hbase.zk.host}" zk-port="${hbase.zk.port}"/>

@@ -1,10 +1,14 @@
 package info.smartkit;
 
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import info.smartkit.data.hadoop.hbase.User;
 import info.smartkit.data.hadoop.hbase.UserRepository;
 import info.smartkit.data.hadoop.hbase.UserUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.hbase.HBaseConfiguration;
+import org.apache.hadoop.hbase.HConstants;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.support.AbstractApplicationContext;
@@ -25,6 +29,9 @@ public class SpringBootHbaseRestfulApplication {
 				"/META-INF/spring/application-context.xml", SpringBootHbaseRestfulApplication.class);
 		log.info("HBase Application Running");
 		context.registerShutdownHook();
+
+//		Configuration hbaseConf = HBaseConfiguration.create();
+//		hbaseConf.set(HConstants.ZOOKEEPER_QUORUM,"localhost");
 
 		UserUtils userUtils = context.getBean(UserUtils.class);
 		userUtils.initialize();
